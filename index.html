@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markaz Hunter // Tactical Air Rifle Store</title>
+    <meta name="description" content="Pusat Senapan Angin Taktikal & Berburu. Akurasi Nitik, QC Passed." />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Chakra Petch & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-black': '#050505',
+              'laser-red': '#ff2a2a',
+              'hud-blue': '#2a6dff',
+              'hazard-yellow': '#eab308',
+              'dark-metal': '#1a1a1a',
+            },
+            fontFamily: {
+              sans: ['"Space Grotesk"', 'sans-serif'],
+              heading: ['"Chakra Petch"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            backgroundImage: {
+              'hazard-stripe': "repeating-linear-gradient(45deg, #eab308 0, #eab308 10px, #000 10px, #000 20px)",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border: 1px solid #ff2a2a;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff2a2a; 
+      }
+      
+      /* Noise Effect Class */
+      .bg-noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+      
+      /* Scanlines */
+      .scanlines {
+        background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+        background-size: 100% 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-deep-black text-white overflow-x-hidden selection:bg-laser-red selection:text-black">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
